@@ -33,7 +33,8 @@ rm -f missing
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure --with-gconf-schema-file-dir=%{_sysconfdir}/schemas
+%configure \
+	--with-gconf-schema-file-dir=%{_sysconfdir}/schemas
 %{__make}
 
 %install
@@ -48,9 +49,9 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README TODO ChangeLog
-%{_sysconfdir}/schemas/clockmail-applet.schemas
-%{_libdir}/bonobo/servers/*
 %attr(755,root,root) %{_libdir}/clockmail_applet2
+%{_libdir}/bonobo/servers/*
 %{_datadir}/gnome-2.0/ui/GNOME_ClockmailApplet.xml
+%{_datadir}/clockmail-applet2
+%{_sysconfdir}/schemas/clockmail-applet.schemas
 %{_pixmapsdir}/*.png
-%{_datadir}/clockmail-applet2/*
