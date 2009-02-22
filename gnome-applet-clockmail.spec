@@ -3,7 +3,7 @@ Summary:	GNOME panel applet, it can display the time, date, mail status, and the
 Summary(pl.UTF-8):	Aplet panelu GNOME do wyświetlania czasu, daty, stanu poczty i liczby wiadomości
 Name:		gnome-applet-clockmail
 Version:	1.9.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/gqapplets/%{_realname}-%{version}.tar.gz
@@ -33,6 +33,7 @@ rm -f missing
 %{__aclocal}
 %{__autoconf}
 %{__automake}
+%{__intltoolize}
 %configure \
 	--with-gconf-schema-file-dir=%{_sysconfdir}/schemas
 %{__make}
