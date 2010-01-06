@@ -11,8 +11,11 @@ Source0:	http://dl.sourceforge.net/gqapplets/%{_realname}-%{version}.tar.gz
 URL:		http://gqapplets.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libtool
+BuildRequires:	gettext-devel
 BuildRequires:	gnome-panel-devel >= 2.0.0
+BuildRequires:	intltool
+BuildRequires:	libtool
+BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_sysconfdir	/etc/gconf
